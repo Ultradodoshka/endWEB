@@ -8,8 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/validation.js" defer></script>
 </head>
 <body>
   <header id="top-header">
@@ -43,38 +43,52 @@
       <div class="row g-5">
         <div class="col-12 col-lg-7">
           <h2 class="section-title">Booking Form</h2>
-          <form id="booking-form" action="#" method="post">
+          <form id="booking-form" action="#" method="post" novalidate>
             <div class="row g-3">
               <div class="col-12 col-md-6">
                 <label for="name" class="form-label">Full name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <input type="text" class="form-control" id="name" name="name" data-validate="true" autocomplete="name" placeholder="Your name">
               </div>
               <div class="col-12 col-md-6">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input type="email" class="form-control" id="email" name="email" data-validate="true" autocomplete="email" placeholder="name@example.com">
               </div>
-              <div class="col-12 col-md-4">
+              <div class="col-12 col-md-6">
+                <label for="phone" class="form-label">Phone number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" data-validate="true" autocomplete="tel" placeholder="+995 555 123 456">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="guests" class="form-label">Number of guests (1–20)</label>
+                <input type="number" class="form-control" id="guests" name="guests" data-validate="true" min="1" max="20" step="1" inputmode="numeric" placeholder="For example, 4">
+              </div>
+              <div class="col-12 col-md-6">
                 <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date" name="date" required>
+                <input type="date" class="form-control" id="date" name="date" data-validate="true">
               </div>
-              <div class="col-12 col-md-4">
+              <div class="col-12 col-md-6">
                 <label for="time" class="form-label">Time</label>
-                <input type="time" class="form-control" id="time" name="time" required>
+                <input type="time" class="form-control" id="time" name="time" data-validate="true">
               </div>
-              <div class="col-12 col-md-4">
-                <label for="guests" class="form-label">Guests</label>
-                <select class="form-select" id="guests" name="guests">
-                  <option>1-2</option><option>3-4</option><option>5-8</option><option>9+ (supra feast)</option>
+              <div class="col-12">
+                <label for="occasion" class="form-label">Occasion</label>
+                <select class="form-select" id="occasion" name="occasion" data-validate="true">
+                  <option value="">Choose an occasion</option>
+                  <option value="Family dinner">Family dinner</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Business meeting">Business meeting</option>
+                  <option value="Special celebration">Special celebration</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div class="col-12">
-                <label for="message" class="form-label">Special requests</label>
-                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                <label for="message" class="form-label">Special requests (optional)</label>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us about any special requests"></textarea>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-gold btn-lg w-100">Send Reservation</button>
               </div>
             </div>
+            <div id="booking-success" class="success-message d-none mt-3" role="status" aria-live="polite"></div>
           </form>
         </div>
 
@@ -104,6 +118,8 @@
 
   <a href="contact.html" class="book-fab btn btn-gold">Book a Table</a>
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>
