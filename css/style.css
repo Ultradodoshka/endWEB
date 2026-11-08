@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --wine: #6d1a2b;
+  --wine-dark: #4a0f1c;
+  --gold: #c9973a;
+  --cream: #faf3e3;
+  --ink: #2b2118;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+}
+h1, h2, h3, .navbar-brand { font-family: "Playfair Display", serif; }
+a { color: var(--wine); }
+
+#top-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--wine-dark);
+}
+main { padding-top: 70px; }
+
+.book-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+
+.brand-accent { color: var(--gold); }
+
+.btn-gold {
+  background-color: var(--gold);
+  color: #fff;
+  border: none;
+}
+.btn-gold:hover {
+  background-color: #a87a25;
+  color: #fff;
+}
+.section-title {
+  color: var(--wine);
+  position: relative;
+  padding-bottom: .5rem;
+}
+.section-title::after {
+  content: "";
+   display: block;
+   width: 60px;
+   height: 3px;
+   background: var(--gold);
+   margin-top: .4rem;
+}
+.text-center.section-title::after { margin-left: auto; margin-right: auto; }
+
+
+#hero {
+  position: relative;
+  min-height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../images/headergc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+#hero .lead { max-width: 600px; margin-bottom: 1.5rem; }
+
+.page-banner {
+  padding: 4rem 1rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/aboutusmid.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.page-banner h1 { font-size: 2.6rem; }
+
+
+
+.dish-card { border: none; box-shadow: 0 4px 14px rgba(0,0,0,.12); transition: transform .25s; }
+.dish-card:hover { transform: translateY(-6px); }
+
+
+.features-band { background-color: #f0e2c4; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.feature {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-top: 4px solid var(--gold); text-align: center;
+}
+.feature-num {
+
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+
+
+.timeline {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.timeline li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .8rem 0;
+  border-bottom: 1px dashed var(--gold);
+}
+.year {
+  background: var(--wine);
+  color: #fff;
+  padding: .2rem .8rem;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.signature { 
+font-family: "Playfair Display", serif;
+font-style: italic;
+color: var(--wine);
+}
+
+
+.menu-table caption {
+  caption-side: top;
+  font-style: italic;
+}
+.menu-table thead {
+  background-color: var(--wine);
+  color: #fff;
+}
+.menu-table thead th {
+  background-color: var(--wine);
+  color: #fff;
+}
+
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.gallery-item {
+  position: relative;
+  margin: 0; overflow: hidden;
+  border-radius: 8px;
+}
+.gallery-item img { width: 100%;
+  height: 300px;
+  display: block;
+  transition: transform .4s;
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(74,15,28,.8); color: #fff; padding: .4rem; text-align: center;
+}
+
+#info-box { background: #fff;
+  padding: 1.5rem;
+  border-left: 5px solid var(--gold);
+  border-radius: 6px;
+}
+#booking-form .form-control:focus,
+#booking-form .form-select:focus { border-color: var(--gold); box-shadow: 0 0 0 .2rem rgba(201,151,58,.25); }
+
+
+#site-footer { background-color: var(--wine-dark); color: #e8d9bd; }
+
+/*Tablet*/
+@media (max-width: 992px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  #gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .page-banner h1 { font-size: 2.2rem; }
+}
+
+/*Mobile*/
+@media (max-width: 576px) {
+  .features-grid, #gallery-grid { grid-template-columns: 1fr; }
+  #hero h1 { font-size: 2.2rem; }
+  .timeline li { flex-direction: column; align-items: flex-start; gap: .3rem; }
+  .book-fab { right: 10px; bottom: 10px; }
+}
