@@ -37,23 +37,30 @@
     </section>
 
     <section class="container py-5">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-8">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search dishes by name (e.g., Khinkali)...">
+        </div>
+        <div class="col-md-4 text-end">
+          <button id="cartBtn" class="btn btn-warning w-100">
+            Cart: <span id="cartCount">0</span> items (<span id="cartTotal">0</span> GEL)
+          </button>
+        </div>
+      </div>
+
       <div class="table-responsive">
         <table class="table table-striped table-hover menu-table align-middle">
           <caption>Dishes served daily from 12:00 to 23:00</caption>
           <thead>
-            <tr><th scope="col">Category</th><th scope="col">Dish</th><th scope="col">Description</th><th scope="col" class="text-end">Price</th></tr>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Dish</th>
+            <th scope="col">Description</th>
+            <th scope="col" class="text-end">Price</th>
+            <th scope="col" class="text-center">Action</th>
+          </tr>
           </thead>
-          <tbody>
-          <tr><td>Starters</td><th scope="row">Pkhali</th><td>Spinach and walnut spread with pomegranate</td><td class="text-end">18 GEL</td></tr>
-          <tr><td>Starters</td><th scope="row">Badrijani</th><td>Fried aubergine rolls with walnut filling</td><td class="text-end">22 GEL</td></tr>
-          <tr><td>Starters</td><th scope="row">Lobio</th><td>Red bean stew in a clay pot with cornbread</td><td class="text-end">20 GEL</td></tr>
-          <tr><td>Mains</td><th scope="row">Khinkali (5 pcs)</th><td>Beef and pork dumplings with black pepper</td><td class="text-end">28 GEL</td></tr>
-          <tr><td>Mains</td><th scope="row">Chakapuli</th><td>Lamb stewed with tarragon and sour plums</td><td class="text-end">48 GEL</td></tr>
-          <tr><td>Mains</td><th scope="row">Mtsvadi</th><td>Grilled pork skewers with tkemali</td><td class="text-end">45 GEL</td></tr>
-          <tr><td>Breads</td><th scope="row">Imeruli Khachapuri</th><td>Imeretian cheese-filled bread</td><td class="text-end">24 GEL</td></tr>
-          <tr><td>Breads</td><th scope="row">Adjaruli Khachapuri</th><td>Boat-shaped, cheese, butter and egg</td><td class="text-end">30 GEL</td></tr>
-          <tr><td>Desserts</td><th scope="row">Churchkhela</th><td>Walnuts in grape-must coating</td><td class="text-end">12 GEL</td></tr>
-          <tr><td>Desserts</td><th scope="row">Pelamushi</th><td>Grape pudding with walnuts</td><td class="text-end">14 GEL</td></tr>
+          <tbody id="menu-container">
           </tbody>
         </table>
       </div>
@@ -89,5 +96,6 @@
   <a href="contact.html" class="book-fab btn btn-gold">Book a Table</a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/menu.js" defer></script>
 </body>
 </html>
