@@ -8,6 +8,7 @@
   --gold: #c9973a;
   --cream: #faf3e3;
   --ink: #2b2118;
+  --surface-color: #fff;
 }
 
 body {
@@ -217,6 +218,49 @@ color: var(--wine);
   letter-spacing: .08em;
   font-size: .85rem;
 }
+
+
+body[data-theme="dark"] {
+  --wine: #e3b85c;
+  --wine-dark: #21151b;
+  --gold: #d7a94e;
+  --cream: #1b1a1d;
+  --ink: #f1ece5;
+  --surface-color: #29272c;
+  color-scheme: dark;
+}
+body[data-theme="dark"] .features-band { background-color: #242126; }
+body[data-theme="dark"] .feature,
+body[data-theme="dark"] .dish-card,
+body[data-theme="dark"] #info-box,
+body[data-theme="dark"] .daily-special-card {
+  background-color: var(--surface-color);
+  color: var(--ink);
+}
+body[data-theme="dark"] .form-control,
+body[data-theme="dark"] .form-select {
+  color: var(--ink);
+  background-color: #211f24;
+  border-color: #57515a;
+}
+body[data-theme="dark"] .form-control::placeholder { color: #b9b1ba; }
+body[data-theme="dark"] .table {
+  --bs-table-color: var(--ink);
+  --bs-table-bg: #29272c;
+  --bs-table-striped-bg: #333037;
+  --bs-table-hover-bg: #3a353d;
+  border-color: #514b54;
+}
+body[data-theme="dark"] .table td,
+body[data-theme="dark"] .table th { color: var(--ink); }
+body[data-theme="dark"] .success-message {
+  color: #c7f0d0;
+  background: #193c29;
+  border-color: #2e6845;
+}
+body[data-theme="dark"] .field-error { color: #ff8a80; }
+body[data-theme="dark"] a:not(.btn):not(.navbar-brand) { color: #e3b85c; }
+body[data-theme="dark"] .timeline li { color: var(--ink); }
 
 
 

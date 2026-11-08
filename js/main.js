@@ -1,9 +1,10 @@
-//Special Dish display
+
 $(function(){
     initDailySpecial();
+    initThemeSwitcher();
 });
 
-
+//Special Dish display
 function initDailySpecial(){
     const $specialImage = $('#special-image');
     const $specialName = $('#special-name');
@@ -48,4 +49,38 @@ function initDailySpecial(){
         $specialName.text(dish.name);
         $specialDescription.text(dish.description);
     });
+}
+
+//Theme Switcher
+function initThemeSwitcher(){
+    const $themeButton = $('#theme-toggle');
+    let savedTheme = 'light';
+
+    try {
+        savedTheme = localStorage.getItem('supra-theme') || 'light';
+    } catch (error) {
+        savedTheme = 'light';
+    }
+
+    applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+    $themeButton.on('click', function () {
+        const nextTheme = $('body').attr('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(nextTheme);
+
+        try {
+            localStorage.setItem('supra-theme', nextTheme);
+        } catch (error) {
+        }
+    });
+    function applyTheme(theme) {
+        $('body').attr('data-theme', theme);
+
+        if ($themeButton.length) {
+            const isDark = theme === 'dark';
+            $themeButton
+                .text(isDark ? 'Light mode' : 'Dark mode')
+                .attr('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode')
+                .attr('aria-pressed', String(isDark));
+        }
+    }
 }
