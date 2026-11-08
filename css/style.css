@@ -199,6 +199,26 @@ color: var(--wine);
 #booking-form .form-control:focus,
 #booking-form .form-select:focus { border-color: var(--gold); box-shadow: 0 0 0 .2rem rgba(201,151,58,.25); }
 
+.daily-special-card {
+  padding: 1.5rem;
+  background: var(--surface-color, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .10);
+}
+#special-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+.special-kicker {
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .85rem;
+}
+
+
 
 #site-footer { background-color: var(--wine-dark); color: #e8d9bd; }
 
