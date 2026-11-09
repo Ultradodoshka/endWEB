@@ -263,6 +263,19 @@ body[data-theme="dark"] .field-error { color: #ff8a80; }
 body[data-theme="dark"] a:not(.btn):not(.navbar-brand) { color: #e3b85c; }
 body[data-theme="dark"] .timeline li { color: var(--ink); }
 
+body[data-theme="dark"] .tab-content-box,
+body[data-theme="dark"] .bg-white,
+body[data-theme="dark"] .bg-light,
+body[data-theme="dark"] .gallery-card .card {
+  background-color: var(--surface-color) !important;
+  color: var(--ink) !important;
+  border-color: #514b54 !important;
+}
+body[data-theme="dark"] .text-muted {
+  color: #b9b1ba !important;
+}
+
+
 /*Validation*/
 .field-error {
   display: block;
