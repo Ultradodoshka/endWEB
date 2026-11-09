@@ -1,39 +1,29 @@
-# Supra Tbilisi - Georgian Restaurant Website
+## 1. Project Description
+**Supra Tbilisi** is a responsive multi-page web application dedicated to authentic Georgian cuisine, wine culture, and hospitality. Developed as an interactive continuation of our Midterm website, this Endterm project extends the original HTML5, CSS3, and Bootstrap 5 layout with dynamic Vanilla JavaScript and jQuery functionality.
 
-**Midterm project** - multi-page responsive website built with HTML5, CSS3 and Bootstrap 5.
+## 2. Group Members & Contributions
+* **Member 1 Kabiev Imangali:** JavaScript Fundamentals & Dynamic Menu (`menu.html`, `js/menu.js`) — `menuItems` and `cart` arrays, `forEach` and `for...of` loops, dynamic table rendering, real-time dish search, and interactive cart counter/total calculation.
+* **Member 2 Zhakiya Omar:** Form Validation & Global UI Features (`contact.html`, `index.html`, `js/validation.js`, `js/main.js`) — custom client-side booking form validation, `localStorage`-persisted Dark/Light theme switcher, and the interactive "Dish of the Day" showcase.
+* **Member 3 Alimkhanov Aldiyar:** jQuery Integration, Interactive Media, Documentation & Deployment (`about.html`, `gallery.html`, `js/jquery-features.js`, `README.md`) — interactive heritage tabs, expandable Qvevri story section (`slideToggle`), category-filtered photo gallery, full-screen Lightbox modal (`fadeIn`/`fadeOut`), DOM traversal, and GitHub Pages deployment.
 
-## Topic
-A website for *Supra Tbilisi*, a fictional Georgian restaurant. It presents the restaurant, its menu and atmosphere, and lets guests send a booking request.
+## 3. Live Demo Link
+* **Published Website (GitHub Pages):** [https://ultradodoshka.github.io/endWEB/](https://ultradodoshka.github.io/endWEB/)
+* **GitHub Repository:** [https://github.com/Ultradodoshka/endWEB](https://github.com/Ultradodoshka/endWEB)
 
-## Pages
-| File | Purpose |
-|------|---------|
-| `index.html` | Home - hero, signature dishes, why dine with us |
-| `about.html` | Story of the restaurant and timeline |
-| `menu.html` | Menu table, dietary notes, wine list |
-| `gallery.html` | Image gallery |
-| `contact.html` | Booking form, address and opening hours |
-
-## Features Implemented
-- **Navigation:** Bootstrap navbar on every page (collapses on mobile), active page highlighted.
-- **Semantic HTML5:** `header`, `nav`, `main`, `section`, `article`, `aside`, `figure`, `figcaption`, `address`, `footer`.
-- **HTML elements:** headings, paragraphs, ordered/unordered lists, links, images, `div` and `span`.
-- **Table:** menu table with caption, `thead`/`tbody`, `scope` attributes (`menu.html`).
-- **Form:** booking form with text, email, date, time, select and textarea (`contact.html`).
-- **CSS:** custom properties, class and ID selectors, consistent colors (wine red + gold) and fonts (Playfair Display, Lato).
-- **Flexbox:** hero, timeline. **Grid:** features section and gallery.
-- **Positioning:** `fixed` header and booking button, `relative`/`absolute` hero overlay and gallery captions.
-- **Responsive:** media queries at 992px (tablet) and 576px (mobile); Bootstrap grid (`row`, `col-*`) and utilities (spacing, text alignment, buttons, containers).
-
-## Structure
-```
-supra/
-  index.html  about.html  menu.html  gallery.html  contact.html
-  css/style.css
-  images/*.jpg
-  README.md
-```
-
-## Deployment
-Published with GitHub Pages
-Bootstrap and Google Fonts load from CDN, so an internet connection is required.
+## 4. Technical Features Implemented (Endterm)
+* **JavaScript Fundamentals:**
+  * Arrays of objects (`menuItems`, `cart` in `js/menu.js`, and `dishes` in `js/main.js`).
+  * Loops (`forEach` for DOM rendering and event binding; `for...of` for calculating cart total).
+  * Reusable functions with parameters and return values (`renderMenu`, `calculateTotal`, `addToCart`, `validateField`, `validateEmail`, `validatePhone`, `getTodayAsString`).
+* **DOM Manipulation & Interactive UI Features (7 Features):**
+  1. **Dark / Light Theme Switcher** with `localStorage` persistence across all 5 pages (`js/main.js`).
+  2. **"Dish of the Day" Interactive Rotator** on the Home page (`index.html`, `js/main.js`).
+  3. **Dynamic Menu Rendering & Live Search** by dish name (`menu.html`, `js/menu.js`).
+  4. **Interactive Order Cart** with item counter and automatic price calculation in GEL (`menu.html`, `js/menu.js`).
+  5. **Interactive Heritage Tabs** on the About page (`about.html`, `js/jquery-features.js`).
+  6. **Expandable Qvevri Wine Story** using slide animation (`about.html`, `js/jquery-features.js`).
+  7. **Category-Filtered Photo Gallery & Fullscreen Lightbox Modal** (`gallery.html`, `js/jquery-features.js`).
+* **Events & Interaction:**
+  * Native `addEventListener` (`DOMContentLoaded`, `input`, `click`) and jQuery event handlers (`click`, `submit`, `change`, `keydown`, `hover`), utilizing the `event` object and `event.preventDefault()`.
+* **Custom Form Validation (`contact.html`, `js/validation.js`):**
+  * Validates
