@@ -2,7 +2,7 @@
 **Supra Tbilisi** is a responsive multi-page web application dedicated to authentic Georgian cuisine, wine culture, and hospitality. Developed as an interactive continuation of our Midterm website, this Endterm project extends the original HTML5, CSS3, and Bootstrap 5 layout with dynamic Vanilla JavaScript and jQuery functionality.
 
 ## 2. Group Members & Contributions
-* **Member 1 Kabiev Imangali:** JavaScript Fundamentals & Dynamic Menu (`menu.html`, `js/menu.js`) — `menuItems` and `cart` arrays, `forEach` and `for...of` loops, dynamic table rendering, real-time dish search, and interactive cart counter/total calculation.
+* **Member 1 Kabiyev Imangali:** JavaScript Fundamentals & Dynamic Menu (`menu.html`, `js/menu.js`) — `menuItems` and `cart` arrays, `forEach` and `for...of` loops, dynamic table rendering, real-time dish search, and interactive cart counter/total calculation.
 * **Member 2 Zhakiya Omar:** Form Validation & Global UI Features (`contact.html`, `index.html`, `js/validation.js`, `js/main.js`) — custom client-side booking form validation, `localStorage`-persisted Dark/Light theme switcher, and the interactive "Dish of the Day" showcase.
 * **Member 3 Alimkhanov Aldiyar:** jQuery Integration, Interactive Media, Documentation & Deployment (`about.html`, `gallery.html`, `js/jquery-features.js`, `README.md`) — interactive heritage tabs, expandable Qvevri story section (`slideToggle`), category-filtered photo gallery, full-screen Lightbox modal (`fadeIn`/`fadeOut`), DOM traversal, and GitHub Pages deployment.
 
